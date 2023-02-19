@@ -138,6 +138,29 @@
     //_FL_DEFPIN(33,  9, 0); // D33 is NFC1, only accessible via test point
 #endif // defined (ARDUINO_NRF52840_FEATHER)
 
+// Seeed Studio XIAO nRF52840
+// See https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/blob/master/variants/Seeed_XIAO_nRF52840/variant.cpp
+#if defined (SEEED_XIAO_NRF52840)
+    #if defined(__FASTPIN_ARM_NRF52_VARIANT_FOUND)
+        #error "Cannot define more than one board at a time"
+    #else
+        #define __FASTPIN_ARM_NRF52_VARIANT_FOUND
+    #endif
+
+    // Arduino pins 0..10
+    _FL_DEFPIN( 0,  2, 0); // D0  is P0.02 -- A0
+    _FL_DEFPIN( 1,  3, 0); // D1  is P0.03 -- A1
+    _FL_DEFPIN( 2, 28, 0); // D2  is P0.28 -- A2
+    _FL_DEFPIN( 3, 29, 0); // D3  is P0.29 -- A3
+    _FL_DEFPIN( 4,  4, 0); // D4  is P0.04 -- A4/SDA
+    _FL_DEFPIN( 5,  5, 0); // D5  is P0.05 -- A5/SCL
+    _FL_DEFPIN( 6, 43, 1); // D6  is P1.11 -- TX
+    _FL_DEFPIN( 7, 44, 1); // D7  is P1.12 -- RX
+    _FL_DEFPIN( 8, 45, 1); // D8  is P1.13 -- SCK
+    _FL_DEFPIN( 9, 46, 1); // D9  is P1.14 -- MISO
+    _FL_DEFPIN(10, 47, 1); // D10 is P1.15 -- MOSI
+#endif // defined (SEEED_XIAO_NRF52840)
+
 // Adafruit Bluefruit nRF52840 Metro Express
 // From https://www.adafruit.com/package_adafruit_index.json
 #if defined (ARDUINO_NRF52840_METRO)
