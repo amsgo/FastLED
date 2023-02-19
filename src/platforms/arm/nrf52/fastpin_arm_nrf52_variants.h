@@ -140,7 +140,7 @@
 
 // Seeed Studio XIAO nRF52840
 // See https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/blob/master/variants/Seeed_XIAO_nRF52840/variant.cpp
-#if defined (SEEED_XIAO_NRF52840)
+#if defined (ARDUINO_Seeed_XIAO_nRF52840)
     #if defined(__FASTPIN_ARM_NRF52_VARIANT_FOUND)
         #error "Cannot define more than one board at a time"
     #else
@@ -159,7 +159,7 @@
     _FL_DEFPIN( 8, 45, 1); // D8  is P1.13 -- SCK
     _FL_DEFPIN( 9, 46, 1); // D9  is P1.14 -- MISO
     _FL_DEFPIN(10, 47, 1); // D10 is P1.15 -- MOSI
-#endif // defined (SEEED_XIAO_NRF52840)
+#endif // defined (ARDUINO_Seeed_XIAO_nRF52840)
 
 // Adafruit Bluefruit nRF52840 Metro Express
 // From https://www.adafruit.com/package_adafruit_index.json
